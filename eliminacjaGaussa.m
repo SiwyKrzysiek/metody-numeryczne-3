@@ -1,8 +1,9 @@
 function X = eliminacjaGaussa(A ,b)
 %ELIMINACJAGAUSSA Summary of this function goes here
 %   Detailed explanation goes here\
-n = length(b)
+n = length(b);
 
+% Doprowadzenei do macierzy trujk¹tnej
 for k = 1:n % Dla ka¿dej kolumny
     diag = A(k, k); % Element na diagonali
     for i = (k+1):n % Dla ka¿dego elementu pod diagonalem
@@ -16,5 +17,15 @@ for k = 1:n % Dla ka¿dej kolumny
 end
 A
 b
+
+%Policzenie x-ów
+X = zeros(n, 1);
+for i = n:-1:1
+   suma = 0;
+   for j = (i+1):n
+      suma = suma + A(i, j) * X(j);
+   end
+   X(i) = (b(i) - suma) / A(i, i);
+end
 end
 
