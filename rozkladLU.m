@@ -1,6 +1,6 @@
 function [L, R] = rozkladLU(A)
 %ROZKLADLU Metod¹ Doolittle'a
-%   Detailed explanation goes here
+%   Tworzy macierze L i R dolno i górno trójk¹tne, takie ¿e A = L*R
 
 % Wersja z dodatkowymi macierzami (mo¿na te¿ nadpisywaæ A)
 n = length(A);
@@ -15,7 +15,7 @@ for k = 2:n
    for i = k:n
        suma = 0;
        for j = 1:(k-1)
-          suma = suma + L(k, j)*R(j, i) 
+          suma = suma + L(k, j)*R(j, i);
        end
        
        R(k, i) = A(k, i) - suma;
