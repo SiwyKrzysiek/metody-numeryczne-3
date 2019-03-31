@@ -15,8 +15,6 @@ for k = 1:n % Dla ka¿dej kolumny
         b(i) = b(i) - b(k)*mul;
     end
 end
-A
-b
 
 %Policzenie x-ów
 X = zeros(n, 1);
