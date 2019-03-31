@@ -3,7 +3,7 @@ function X = eliminacjaGaussa(A ,b)
 %   Detailed explanation goes here\
 n = length(b);
 
-% Doprowadzenei do macierzy trujk¹tnej
+% Doprowadzenie do macierzy trójk¹tnej
 for k = 1:n % Dla ka¿dej kolumny
     diag = A(k, k); % Element na diagonali
     for i = (k+1):n % Dla ka¿dego elementu pod diagonalem
