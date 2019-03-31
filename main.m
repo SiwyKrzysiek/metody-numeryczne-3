@@ -21,3 +21,7 @@ A = [1 2 3; 4 3 -1; 1 -1 1];
 b = [14 7 2]';
 
 y = metodaGaussaJordana(A, b);
+
+%% Testy odwracania GJ
+A = [8 5; 13 8];
+y2 = odwracanieMetodaGaussaJordana(A);
