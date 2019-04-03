@@ -8,7 +8,8 @@ for k = 1:n % Dla ka¿dej kolumny
     doDolu = A(k:n, k);
     
     [~, indexMaksa] = znajdzMax(doDolu);
-    
+    indexMaksa = indexMaksa + k - 1;
+    [A, b] = zamianaWierszy(A, b, k, indexMaksa);
     
     
     diag = A(k, k); % Element na diagonali
