@@ -5,6 +5,12 @@ n = length(b);
 
 % Doprowadzenie do macierzy trójk¹tnej
 for k = 1:n % Dla ka¿dej kolumny
+    doDolu = A(k:n, k);
+    
+    [~, indexMaksa] = znajdzMax(doDolu);
+    
+    
+    
     diag = A(k, k); % Element na diagonali
     for i = (k+1):n % Dla ka¿dego elementu pod diagonalem
         mul = A(i, k) / diag;
